@@ -1,3 +1,10 @@
+#讀檔
+setwd("/Users/Andy 1/Google 雲端硬碟 (r08323004@g.ntu.edu.tw)/0 Semesters/108-2/二 ccClub/0 Github Repo/ccClub2020_Spring/R")
+
+#Read Fama
+earthquake = read.csv("/Users/Andy 1/Google 雲端硬碟 (r08323004@g.ntu.edu.tw)/0 Semesters/108-2/二 ccClub/0 Github Repo/ccClub2020_Spring/R/raw/earthquake_data.csv")
+
+
 library(glmnet) #Lasso
 
 #Def 1
