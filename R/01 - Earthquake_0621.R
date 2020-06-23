@@ -85,7 +85,9 @@ summary(reg2)
 margins(reg2)
 
 #reg out
-x = tab_model(reg1, reg2, show.p = T, show.se = T,robust = T, file = "output/03/reg.html")
+x = tab_model(reg1, reg2, 
+              show.p = T, show.se = T,robust = T, digits = 4,
+              title = "Time Difference after the first 爆文", file = "output/03/reg.html")
 cat(x[["page.style"]], x[["page.complete"]], file = "output/03/reg.html")
 reg_out_png = "output/03/reg.png"
 webshot("output/03/reg.html", reg_out_png) #save as png
