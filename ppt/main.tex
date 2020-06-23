@@ -1,0 +1,91 @@
+%\documentclass[aspectratio=43]{beamer}
+
+%
+\documentclass[10pt]{beamer}
+
+\usepackage{xeCJK}
+\setCJKmainfont{蘋方-繁}
+
+\setbeamertemplate{caption}[numbered] %加入圖片
+
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{appendixnumberbeamer}
+\usepackage{color}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+\usepackage{xspace}
+\usepackage{listings}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+%
+
+%\usepackage[english]{babel}
+%\usepackage{mathtools}
+%\usepackage{amsmath}
+
+%\usepackage[backend=biber]{biblatex}
+
+%\input{chapters/preamble}
+\title{計量經濟學電腦實習課} %->->->->-> Check hyperref title <-<-<-<-<-
+\subtitle{L4 IV, Qusi-Experiments}
+\author[Boyie]{陳柏瑜 Chen Boyie}
+\institute[NTU]{
+    Graduate Institute of Economics\\
+    National Taiwan University\\
+    r08323004@ntu.edu.tw%
+} %You can change the Institution if you are from somewhere else
+\date{\today}
+%\logo{\includegraphics[width= 0.2\textwidth]{images/a-logo.png}}
+
+\begin{document}
+    
+    \frame{\titlepage}
+    
+    \begin{frame}{Brief}
+        \tableofcontents
+    \end{frame}
+    
+    \input{chapters/01-Review_IV_EE12-2.tex}
+
+    \input{chapters/02-Quasi_experiment_EE13-1.tex}
+    
+    %\input{chapters/03-Reshape.tex}
+    
+    \input{chapters/04-HW5_Announcement.tex}
+
+
+%\begin{frame}{Q and A}
+%        \centering
+%            \Huge\bfseries
+%        \textcolor{orange}{Any question is welcomed!}
+%    \end{frame}
+
+%    \begin{frame}{Bye!}
+%        \centering
+%            \Huge\bfseries
+%        \textcolor{orange}{Thank you}
+%    \end{frame}
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+ %   \section*{References} 
+ %   \nocite{Li_Norman2018} \nocite{Kamenica_Gentzkow2011} \nocite{Sunstein2005} \nocite{Gentzkow_Kamenica2017}
+ %   \nocite{Gentzkow_Kamenica2017a}
+ %       \begin{frame}[allowframebreaks]{References}
+ %          \printbibliography
+ %       \end{frame}
