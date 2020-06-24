@@ -1,3 +1,4 @@
-\beamer@sectionintoc {1}{Instrument Variable EE12.2}{3}{0}{1}
-\beamer@sectionintoc {2}{Quasi Experiment EE13.1}{24}{0}{2}
-\beamer@sectionintoc {3}{Stata Homework 5 Announcement}{39}{0}{3}
+\beamer@sectionintoc {1}{Inroduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Data}{8}{0}{2}
+\beamer@sectionintoc {3}{Results}{15}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{28}{0}{4}

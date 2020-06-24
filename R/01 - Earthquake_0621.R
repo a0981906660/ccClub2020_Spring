@@ -25,7 +25,7 @@ hist(earthquake$Distance)
 
 # Part 1: Probit
 ## We aim to know the probability of 搶到地震爆文
-reg_formula = as.formula("YouWin ~ Distance + ShakingExtent + InCenter+ IsPeak + OffPeak + PopDensity")
+reg_formula = as.formula("YouWin ~ Distance + ShakingExtent + InCenter+ IsPeak + OffPeak + PopDensity + download_4G + upload_4G")
 #LPM
 reg1 = lm(reg_formula, data = earthquake)
 summary(reg1)
@@ -52,7 +52,7 @@ webshot("output/01/reg.html", reg_out_png) #save as png
 #############################################
 # Part 2: Time Difference
 ## We aim to know the time difference of 地震爆文及失敗地震文
-reg_formula = as.formula("TimeDifference ~ Distance + ShakingExtent + InCenter+ IsPeak + OffPeak + PopDensity")
+reg_formula = as.formula("TimeDifference ~ Distance + ShakingExtent + InCenter+ IsPeak + OffPeak + PopDensity + download_4G + upload_4G-1")
 
 #LPM
 reg1 = lm(reg_formula, data = earthquake)
@@ -74,7 +74,7 @@ webshot("output/02/reg.html", reg_out_png) #save as png
 #############################################
 # Part 3: Time Difference between 爆文 & 其他地震文
 ## We aim to know the time difference of 地震爆文及失敗地震文
-reg_formula = as.formula("TimeDifference_Bao ~ Distance + ShakingExtent + InCenter+ IsPeak + OffPeak + PopDensity-1")
+reg_formula = as.formula("TimeDifference_Bao ~ Distance + ShakingExtent + InCenter+ IsPeak + OffPeak + PopDensity + download_4G + upload_4G-1")
 #LPM
 reg1 = lm(reg_formula, data = earthquake)
 summary(reg1)
