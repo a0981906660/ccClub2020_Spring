@@ -98,27 +98,27 @@ outreg2 using BinaryResponse, append tex ct(Logit)
 
 
 //Time Difference
-reg youwin $X, cluster(groupid)
-outreg2 using BinaryResponse, replace tex ct(LPM:POLS)
+reg timedifference $X, cluster(groupid)
+outreg2 using TimeDifference, replace tex ct(POLS)
 
-xtreg youwin $X, re cluster(groupid)
-outreg2 using BinaryResponse, append tex ct(LPM:RE)
+xtreg timedifference $X, re cluster(groupid)
+outreg2 using TimeDifference, append tex ct(RE)
 
-xtreg youwin distance incenter popdensity download_4g upload_4g, fe cluster(groupid)
-outreg2 using BinaryResponse, append tex ct(LPM:FE)
+xtreg timedifference distance incenter popdensity download_4g upload_4g, fe cluster(groupid)
+outreg2 using TimeDifference, append tex ct(FE)
 
-probit youwin $X, cluster(groupid)
-outreg2 using BinaryResponse, append tex ct(Probit)
+poisson timedifference $X, cluster(groupid)
+outreg2 using TimeDifference, append tex ct(Poisson)
 
-logit youwin $X, cluster(groupid)
-outreg2 using BinaryResponse, append tex ct(Logit)
+//Time Difference_Bao
+reg timedifference_bao $X, cluster(groupid)
+outreg2 using TimeDifference_bao, replace tex ct(POLS)
 
+xtreg timedifference_bao $X, re cluster(groupid)
+outreg2 using TimeDifference_bao, append tex ct(RE)
 
-xtreg lvio shall, fe vce(cluster stateid)
-outreg2 using EE10_1, append tex ct(S.FE 1) addtext(State FE, YES)
-xtreg lvio shall $control_vlbs, fe vce(cluster stateid)
-outreg2 using EE10_1, append tex ct(S.FE 2) addtext(State FE, YES)
-xtreg lvio shall i.year, fe vce(cluster stateid)
-outreg2 using EE10_1, append tex ct(T.FE 1) keep(shall) addtext(State FE, YES, Year FE, YES)
-xtreg lvio shall $control_vlbs i.year, fe vce(cluster stateid)
-outreg2 using EE10_1, append tex ct(T.FE 2) keep(shall incarc_rate density avginc pop pb1064 pw1064 pm1029) addtext(State FE, YES, Year FE, YES)
+xtreg timedifference_bao distance incenter popdensity download_4g upload_4g, fe cluster(groupid)
+outreg2 using TimeDifference_bao, append tex ct(FE)
+
+poisson timedifference_bao $X, cluster(groupid)
+outreg2 using TimeDifference_bao, append tex ct(Poisson)
